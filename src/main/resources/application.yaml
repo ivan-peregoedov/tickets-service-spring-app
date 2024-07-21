@@ -1,0 +1,22 @@
+spring:
+    jackson:
+        serialization:
+            fail-on-empty-beans: false
+
+    application:
+        name: application
+    datasource:
+        url: "jdbc:postgresql://localhost:8880/Test"
+        username: "postgres"
+        password: "12345"
+        driver-class-name: org.postgresql.Driver    
+    jpa:
+        hibernate:
+            ddl-auto: update
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+server:
+    port: 9090
+
+
+
