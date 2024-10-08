@@ -40,7 +40,6 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeBodyPart;
 import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeMultipart;
-import jakarta.persistence.EntityNotFoundException;
 
 import com.spire.barcode.BarcodeSettings;
 
@@ -238,18 +237,3 @@ public class OrderService {
     }
 
 }
-
-// curl https:// api.yookassa.ru/v3/payments \
-// -
-// X POST\-u
-// 396680:test_TtwjgjtovcypndR22sy3AaQUyMHfFaH_1HaTFcRasMw\-H'Idempotence-Key:nghyuerubn'
-// \-H'Content-Type:application/json' \-d'{"amount":
-// {
-// "value": "2.00",
-// "currency": "RUB"
-// },"confirmation":
-// {
-// "type": "embedded"
-// },"capture":true,"description":"Заказ №72"
-// }
-// '
