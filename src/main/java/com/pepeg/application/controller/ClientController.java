@@ -37,7 +37,7 @@ public class ClientController {
         return eventService.getEventsByCity(city);
     }
 
-    @PostMapping("events/createOrder")
+    @PostMapping("events")
     public Order createOrder(Order order, @RequestParam Long ticketId, Principal principal) throws Exception {
         return orderService.createOrder(order, principal.getName(), ticketId);
     }
