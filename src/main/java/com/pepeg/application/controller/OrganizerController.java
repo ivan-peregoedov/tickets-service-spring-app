@@ -32,29 +32,29 @@ public class OrganizerController {
 
     private final TicketService ticketService;
 
-    @GetMapping("events/all")
+    @GetMapping("events")
     public List<Event> getOrganizerEvents(Principal principal) {
         User org = userService.findUserByEmail(principal.getName());
         return eventService.getAllOrganizerEvents(org);
     }
 
-    @PostMapping("events/create")
+    @PostMapping("events")
     public Event create(@RequestBody Event event, Principal principal) throws Exception {
         return eventService.saveEvent(event, principal.getName());
 
     }
 
-    @PutMapping("events/edit")
+    @PutMapping("events")
     public Event edit(@RequestBody Event event, @RequestParam Long id) {
         return eventService.editEvent(event, id);
     }
 
-    @DeleteMapping("events/delete")
+    @DeleteMapping("events")
     public void deleteEvent(@RequestParam Long id) {
         eventService.deleteEvent(id);
     }
 
-    @DeleteMapping("tickets/delete")
+    @DeleteMapping("tickets")
     public void deleteTicket(@RequestParam Long id) {
         ticketService.deleteTicket(id);
     }
